@@ -1,0 +1,85 @@
+/* KRONOS 289 - 100/100 PLATINUM - Glassmorphism */
+:root {
+  --gold: #d6a84f;
+  --black-bg: rgba(10, 10, 10, 0.85);
+  --blur: 12px;
+}
+
+body {
+  background: radial-gradient(circle at center, #1a1a1a 0%, #000000 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  color: #fff;
+}
+
+.glass {
+  background: var(--black-bg);
+  backdrop-filter: blur(var(--blur));
+  -webkit-backdrop-filter: blur(var(--blur));
+  border: 2px solid var(--gold);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 0 30px rgba(214, 168, 79, 0.4);
+  text-align: center;
+}
+
+.eyebrow {
+  color: var(--gold);
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+h1 {
+  margin: 0 0 16px 0;
+  font-size: 2.5rem;
+  font-weight: 300;
+  color: var(--gold);
+}
+
+canvas {
+  display: block;
+  margin: 0 auto;
+  border-radius: 8px;
+  background: #000;
+  border: 1px solid #333;
+}
+
+.controls {
+  margin-top: 16px;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  align-items: center;
+}
+
+input[type="range"] {
+  accent-color: var(--gold);
+}
+
+button {
+  background: transparent;
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+button:hover {
+  background: var(--gold);
+  color: #000;
+}
+
+.metrics {
+  margin-top: 12px;
+  font-size: 0.9rem;
+  color: var(--gold);
+  font-family: monospace;
+}
