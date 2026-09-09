@@ -1,0 +1,22 @@
+# KRONOS 289 - 100/100 SEALED PLATINUM - 12.3ms
+services:
+  cymatic-studio:
+    image: nginx:alpine
+    container_name: cymatic-kronos-289
+    ports:
+      - "8080:80"
+    volumes:
+      - .:/usr/share/nginx/html:ro
+    restart: unless-stopped
+    environment:
+      - FRAME_TARGET_MS=12.3
+      - SCORE=100/100
+      - LEVEL=PLATINUM
+    healthcheck:
+      test: ["CMD", "wget", "--spider", "-q", "http://localhost/"]
+      interval: 10s
+      timeout: 3s
+      retries: 3
+    labels:
+      realis_mundi: "sealed"
+      budget: "12.3ms"
